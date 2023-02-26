@@ -36,6 +36,17 @@ const Layout = () => {
           your browser, I never see it or save it. Once you close your browser
           window, your key is gone.
         </Text>
+        <Text color="red">
+          Under no circumstances will I pay for your OpenAI usage! So, usage of
+          this site is at your own risk!
+        </Text>
+        <Text>
+          Generally, each example will incur only a few cents or less against
+          your OpenAI account. If any of the examples might incur a larger cost,
+          I'll try to note that in the example. When you register an account for
+          the first time, OpenAI will give you $15 of free credits, so you'll
+          have plenty to play with.
+        </Text>
         <Separator />
         <Stack tokens={{ childrenGap: 10 }}>
           <Text variant="large">Menu</Text>

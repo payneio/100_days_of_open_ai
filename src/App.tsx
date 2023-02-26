@@ -57,10 +57,10 @@ const bottomBarStyles: React.CSSProperties = {
   padding: '0 10px',
 }
 
-const hiddenKey = (key: string) => {
-  if (key === '') return ''
-  return key.substring(0, 3) + '...' + key.substring(key.length - 3)
-}
+// const hiddenKey = (key: string) => {
+//   if (key === '') return ''
+//   return key.substring(0, 3) + '...' + key.substring(key.length - 3)
+// }
 
 const Layout = () => {
   const [openAIKey, setOpenAIKey] = useState<string>(
