@@ -15,7 +15,7 @@ function useOpenAI(): OpenAIApi | undefined {
     });
     const openAIClient = new OpenAIApi(configuration);
     setOpenAI(openAIClient);
-  }, []);
+  }, [openAIKey]);
 
   return openai;
 }
