@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Routes, Route, Link, Outlet } from 'react-router-dom';
 import Home from './Home';
 import Day00 from './Experiments/Day00';
-import { Label, Stack, Text, TextField } from '@fluentui/react';
+import { Label, Stack, TextField } from '@fluentui/react';
 
 const windowStyles: React.CSSProperties = {
   margin: 0,
