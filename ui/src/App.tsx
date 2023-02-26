@@ -21,16 +21,6 @@ const windowStyles: React.CSSProperties = {
   `,
 }
 
-const toolbarStyles: React.CSSProperties = {
-  gridArea: 'toolbar',
-  backgroundColor: 'rgb(51, 51, 51)',
-  overflow: 'hidden',
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  justifyContent: 'flex-start',
-}
-
 const topBarStyles: React.CSSProperties = {
   gridArea: 'topBar',
   backgroundColor: '#04395e',
