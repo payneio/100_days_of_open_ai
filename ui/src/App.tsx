@@ -1,7 +1,9 @@
 import './App.css';
+import { useState } from 'react';
 import { Routes, Route, Link, Outlet } from 'react-router-dom';
 import Home from './Home';
 import Day00 from './Experiments/Day00';
+import { Label, Stack, Text, TextField } from '@fluentui/react';
 
 const windowStyles: React.CSSProperties = {
   margin: 0,
@@ -65,13 +67,29 @@ const bottomBarStyles: React.CSSProperties = {
   padding: '0 10px',
 }
 
+const hiddenKey = (key: string) => {
+  return key.substring(0,3) + '...' + key.substring(key.length - 3);
+}
+
 const Layout = () => {
+
+  const [openAIKey, setOpenAIKey] = useState<string>(sessionStorage.getItem("openAIKey") || '');
+
+  const handleKeyChange = (event: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>, newValue?: string) => {
+    sessionStorage.setItem("openAIKey", newValue || '');
+    setOpenAIKey(newValue || '');
+  }
+
   return (
     <div style={windowStyles}>
       <div style={topBarStyles} aria-label="Top bar">
         <Link to="/" style={{ textDecoration: 'none' }}>
           <div style={brand}>100 Days of OpenAI</div>
         </Link>
+        <Stack horizontal={true} style={{ marginRight: '5px'}}>
+          <Label style={{color: 'white', marginRight: '0.5em'}}>OpenAI Key</Label>
+          <TextField id="OpenAIKey" onChange={handleKeyChange} value={hiddenKey(openAIKey)} style={{ width: '100px' }}></TextField>
+        </Stack>
       </div>
       <div style={mainStyles}>
         <main><Outlet/></main>
