@@ -3,7 +3,7 @@ import PromptRunner from '../components/PromptRunner'
 
 function Day01() {
   return (
-    <Stack tokens={{ childrenGap: 10 }}>
+    <Stack tokens={{ childrenGap: '1.5rem' }}>
       <Text variant="large">Day 1: Prompt basics, a.k.a. text completion</Text>
       <Text>
         So, what this example is doing is taking the prompt you enter and

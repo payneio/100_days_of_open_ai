@@ -4,7 +4,7 @@ import { Link, Separator, Stack, Text } from '@fluentui/react'
 const Layout = () => {
   return (
     <main style={{ padding: '1rem 0' }}>
-      <Stack tokens={{ childrenGap: 10 }}>
+      <Stack tokens={{ childrenGap: '1.5rem' }}>
         <Text>
           This is a personal exercise to continue exploring applications of
           OpenAI models by creating 100 different examples of using OpenAI.
@@ -48,10 +48,11 @@ const Layout = () => {
           have plenty to play with.
         </Text>
         <Separator />
-        <Stack tokens={{ childrenGap: 10 }}>
+        <Stack tokens={{ childrenGap: 5 }}>
           <Text variant="large">Menu</Text>
-          <RouterLink to="/day-00">Day 00: Setup</RouterLink>
-          <RouterLink to="/day-01">Day 01: Prompt basics</RouterLink>
+          <RouterLink to="/day-00">Day 0: Setup</RouterLink>
+          <RouterLink to="/day-01">Day 1: Prompt basics</RouterLink>
+          <RouterLink to="/day-02">Day 2: Write a poem</RouterLink>
         </Stack>
       </Stack>
     </main>

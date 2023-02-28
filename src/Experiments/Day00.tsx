@@ -4,7 +4,7 @@ import { Link as RouterLink } from 'react-router-dom'
 
 function Day00() {
   return (
-    <Stack tokens={{ childrenGap: 10 }}>
+    <Stack tokens={{ childrenGap: '1.5rem' }}>
       <Text variant="large">Day 00</Text>
       <Text>
         You'll need to get your OpenAI key and paste it into the header above.
