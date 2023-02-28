@@ -51,6 +51,7 @@ const Layout = () => {
         <Stack tokens={{ childrenGap: 10 }}>
           <Text variant="large">Menu</Text>
           <RouterLink to="/day-00">Day 00: Setup</RouterLink>
+          <RouterLink to="/day-01">Day 01: Prompt basics</RouterLink>
         </Stack>
       </Stack>
     </main>

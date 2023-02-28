@@ -1,5 +1,6 @@
 import { Link, Stack, Text } from '@fluentui/react'
 import PromptRunner from '../components/PromptRunner'
+import { Link as RouterLink } from 'react-router-dom'
 
 function Day00() {
   return (
@@ -29,7 +30,21 @@ function Day00() {
         </Link>{' '}
         and click "Create API Key".
       </Text>
-      <PromptRunner />
+      <PromptRunner prompt="Say this is a test" />
+      <Text>
+        If you put a valid OpenAI key in the header, when you click on the "Run"
+        button, you should see a response from OpenAI after your text (it is put
+        right in the textbox, which is convenient if you want to use what was
+        returned for another prompt).
+      </Text>
+      <Text>
+        If you don't see a response, you probably didn't put in a valid key.
+        Check to make sure you copied the key correctly.
+      </Text>
+      <Text>
+        So, great! Now let's go on to{' '}
+        <RouterLink to="/day-01">Day 01</RouterLink>.
+      </Text>
     </Stack>
   )
 }

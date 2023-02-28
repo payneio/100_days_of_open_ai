@@ -13,9 +13,19 @@ import useOpenAI from '../lib/hooks/useOpenAI'
 import { hasOpenAIKey } from '../lib/state'
 import { useState, useRef } from 'react'
 
-const PromptRunner = () => {
+// component params type
+type PromptRunnerProps = {
+  id?: string
+  prompt: string
+  maxTokens?: number
+}
+
+const PromptRunner = ({ id, prompt, maxTokens }: PromptRunnerProps) => {
+  id = id || 'prompt-runner-' + Math.random().toString(36).substring(2, 7)
+  maxTokens = maxTokens || 256
+
   const [response, setResponse] = useState('No response yet')
-  const [prompt, setPrompt] = useState('Say this is a test')
+  const [myPrompt, setPrompt] = useState(prompt)
   const [loading, setLoading] = useState(false)
   const inputRef = useRef<ITextField>(null)
 
@@ -39,10 +49,10 @@ const PromptRunner = () => {
       model: 'text-davinci-003',
       prompt: inputRef.current.value,
       temperature: 0,
-      max_tokens: 1024,
+      max_tokens: maxTokens,
     })
     setLoading(false)
-    setPrompt(prompt + response.data.choices[0].text)
+    setPrompt(myPrompt + response.data.choices[0].text)
     setResponse(response.data.choices[0].text || 'error')
   }
 
@@ -88,9 +98,10 @@ const PromptRunner = () => {
         <TextField
           multiline
           rows={15}
-          value={prompt}
+          value={myPrompt}
           onChange={handlePrompt}
           componentRef={inputRef}
+          id={`prompt-runner-${id}`}
         />
       </StackItem>
       <Stack horizontal tokens={{ childrenGap: '10px' }}>

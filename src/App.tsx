@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { Routes, Route, Link, Outlet } from 'react-router-dom'
 import Home from './Home'
 import Day00 from './Experiments/Day00'
+import Day01 from './Experiments/Day01'
 import { Label, Stack, TextField } from '@fluentui/react'
 
 const windowStyles: React.CSSProperties = {
@@ -117,6 +118,7 @@ function App() {
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="day-00" element={<Day00 />} />
+          <Route path="day-01" element={<Day01 />} />
         </Route>
       </Routes>
     </div>
