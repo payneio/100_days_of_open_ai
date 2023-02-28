@@ -4,7 +4,7 @@ import PromptRunner from '../components/PromptRunner'
 function Day02() {
   return (
     <Stack tokens={{ childrenGap: '1.5rem' }}>
-      <Text variant="large">Day 1: Write a poem</Text>
+      <Text variant="large">Day 2: Write a poem</Text>
       <Text>
         Let's use OpenAI's <em>completion</em> API to write a poem about what
         some of us may be feeling right now.
