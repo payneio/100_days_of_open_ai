@@ -1,4 +1,4 @@
-import { Link, Stack, Text } from '@fluentui/react'
+import { Stack, Text } from '@fluentui/react'
 import PromptRunner from '../components/PromptRunner'
 
 const prompt = `A patient after-visit report:
