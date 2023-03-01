@@ -45,6 +45,7 @@ const PromptRunner = ({ id, prompt, maxTokens }: PromptRunnerProps) => {
   const handleClick = async () => {
     if (!openai || !inputRef?.current?.value) return
     setLoading(true)
+
     const response = await openai.createCompletion({
       model: 'text-davinci-003',
       prompt: inputRef.current.value,

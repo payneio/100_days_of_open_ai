@@ -53,6 +53,9 @@ const Layout = () => {
           <RouterLink to="/day-00">Day 0: Setup</RouterLink>
           <RouterLink to="/day-01">Day 1: Prompt basics</RouterLink>
           <RouterLink to="/day-02">Day 2: Write a poem</RouterLink>
+          <RouterLink to="/day-03">
+            Day 3: Summarize and explain complicated medical information
+          </RouterLink>
         </Stack>
       </Stack>
     </main>
