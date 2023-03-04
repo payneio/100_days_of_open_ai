@@ -18,10 +18,12 @@ type PromptRunnerProps = {
   id?: string
   prompt: string
   maxTokens?: number
+  lines?: number
 }
 
-const PromptRunner = ({ id, prompt, maxTokens }: PromptRunnerProps) => {
+const PromptRunner = ({ id, prompt, maxTokens, lines }: PromptRunnerProps) => {
   id = id || 'prompt-runner-' + Math.random().toString(36).substring(2, 7)
+  lines = lines || 15
   maxTokens = maxTokens || 256
 
   const [response, setResponse] = useState('No response yet')
@@ -98,7 +100,7 @@ const PromptRunner = ({ id, prompt, maxTokens }: PromptRunnerProps) => {
         )}
         <TextField
           multiline
-          rows={15}
+          rows={lines}
           value={myPrompt}
           onChange={handlePrompt}
           componentRef={inputRef}

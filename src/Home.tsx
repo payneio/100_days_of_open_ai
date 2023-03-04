@@ -56,6 +56,9 @@ const Layout = () => {
           <RouterLink to="/day-03">
             Day 3: Summarize and explain complicated medical information
           </RouterLink>
+          <RouterLink to="/day-04">
+            Day 4: Limitations: Understanding
+          </RouterLink>
         </Stack>
       </Stack>
     </main>

@@ -6,6 +6,7 @@ import Day00 from './Experiments/Day00'
 import Day01 from './Experiments/Day01'
 import Day02 from './Experiments/Day02'
 import Day03 from './Experiments/Day03'
+import Day04 from './Experiments/Day04'
 import { Label, Stack, TextField } from '@fluentui/react'
 
 const windowStyles: React.CSSProperties = {
@@ -123,6 +124,7 @@ function App() {
           <Route path="day-01" element={<Day01 />} />
           <Route path="day-02" element={<Day02 />} />
           <Route path="day-03" element={<Day03 />} />
+          <Route path="day-04" element={<Day04 />} />
         </Route>
       </Routes>
     </div>
